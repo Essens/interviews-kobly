@@ -23,5 +23,7 @@ public class HexConverterTest {
     assertThat(HexConverter.fromHex("1")).isEqualTo(1);
     assertThat(HexConverter.fromHex("f")).isEqualTo(15);
     assertThat(HexConverter.fromHex("10")).isEqualTo(16);
+    assertThat(HexConverter.fromHex("ff")).isEqualTo(255);
+    assertThat(HexConverter.fromHex("100")).isEqualTo(256);
   }
 }

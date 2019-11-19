@@ -1,5 +1,7 @@
 package no.kobler.kobly.core;
 
+import java.math.BigInteger;
+
 public class HexConverter {
   private static String ALPHABET = "0123456789abcdef";
 
@@ -22,7 +24,14 @@ public class HexConverter {
     int pos = 0;
 
     for (char c : new StringBuilder(s).reverse().toString().toCharArray()) {
-      n += ALPHABET.indexOf(c) * 16 * pos;
+      int value = ALPHABET.indexOf(c);
+
+      if (pos > 0) {
+        value = value * BigInteger.valueOf(16).pow(pos).intValue();
+      }
+
+      n += value;
+
       pos += 1;
     }
 

@@ -1,19 +1,5 @@
 package no.kobler.kobly.core;
 
-<<<<<<< HEAD
-import java.util.Optional;
-
-public class UrlShortener {
-  public String shorten(String url) {
-    return "";
-  }
-
-  public Optional<String> findUrl(String id) {
-    return Optional.empty();
-  }
-}
-
-=======
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Optional;
@@ -37,4 +23,3 @@ public class UrlShortener {
     return Optional.ofNullable(store.get(Integer.valueOf(id, 26)));
   }
 }
->>>>>>> Simple in-memory shortener
