@@ -19,9 +19,9 @@ public class HexConverterTest {
 
   @Test
   public void testFromHex() {
-    //assertThat(HexConverter.fromHex("0")).isEqualTo(0);
-    //assertThat(HexConverter.fromHex("1")).isEqualTo(1);
-    //assertThat(HexConverter.fromHex("f")).isEqualTo(15);
+    assertThat(HexConverter.fromHex("0")).isEqualTo(0);
+    assertThat(HexConverter.fromHex("1")).isEqualTo(1);
+    assertThat(HexConverter.fromHex("f")).isEqualTo(15);
     assertThat(HexConverter.fromHex("10")).isEqualTo(16);
   }
 }
