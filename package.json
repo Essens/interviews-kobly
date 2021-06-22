@@ -1,0 +1,27 @@
+{
+  "name": "interviews-kobly",
+  "version": "1.0.0",
+  "description": "How to start the Kobly application ---",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node --experimental-modules index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Essens/interviews-kobly.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Essens/interviews-kobly/issues"
+  },
+  "homepage": "https://github.com/Essens/interviews-kobly#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "mocha": "^9.0.1",
+    "supertest": "^6.1.3"
+  }
+}
