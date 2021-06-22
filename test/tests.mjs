@@ -22,7 +22,7 @@ describe('GET /shorten', () => {
         .expect(response => {
           first = response.body.url;
           assert(
-              response.body.url.length < longUrl.length)
+              response.body.url && response.body.url.length < longUrl.length)
         })
       }
   );

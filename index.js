@@ -1,3 +1,4 @@
+// noinspection JSCheckFunctionSignatures
 import express from "express";
 
 const app = express();
@@ -8,24 +9,18 @@ const healthcheck = (req, res) => {
 };
 
 app.locals.database = {};
-const urls = app.locals.database;
 
 function shorten(req, res) {
-  const url = req.query.url;
-  const shorterUrl = "http://www."+Object.keys(urls).length+".com";
+  // Implement me
 
-  urls[shorterUrl] = url;
-
-  res.status(200).send({url: shorterUrl})
+  res.status(200).send({url: ""})
 };
-
 
 const findUrl = (req, res) => {
-  const shortUrl = req.query.url;
+  // Implement me
 
-  res.status(200).send({url: urls[shortUrl]})
+  res.status(200).send({url: ""})
 };
-
 
 app.get('/', (req, res) => res.send({"message": "hello, world"}));
 app.get('/healthcheck', healthcheck);
