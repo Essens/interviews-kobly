@@ -2,6 +2,15 @@ import request from "supertest";
 import assert from "assert";
 import app from '../index.js'
 
+/**
+ * NB: Tests assume both the /shorten and /findurl endpoints are GETs,
+ * and expect the [to-be-shortened or shortened] url to be given as a query
+ * parameter. The tests further assume the response from both endpoints is
+ * on the format {url: <some-string>}
+ *
+ */
+
+
 describe('GET /shorten', () => {
   const agent = request.agent(app);
   const longUrl = 'http://www.this.is.a.long.url.com';
@@ -22,7 +31,6 @@ describe('GET /shorten', () => {
     return agent
     .get('/shorten?url='+longUrl)
     .expect(response => {
-      console.log('response.body.url', response.body.url, 'first', first);
       assert(response.body.url !== first)
     })
   })
